@@ -19,6 +19,7 @@ $white: #fff;
 $headerLinkColor: #3c3c3c;
 $homeLinkColor: #ada074;
 
+// Mixins
 @mixin textParameters($color: $dark,
                         $size: 14px,
                         $style: normal,
@@ -44,7 +45,6 @@ $homeLinkColor: #ada074;
 
 body {
   font-family: 'Lato', sans-serif;
-
   @include textParameters();
 }
 
@@ -61,6 +61,7 @@ body {
 	background: url(/img/BG-Intro-cut.jpg) 0 0/cover no-repeat;
 }
 
+// Templates
 .title {
   position: relative;
   padding-bottom: 50px;
@@ -94,6 +95,8 @@ body {
                           $weight: 400,
                           $transform: uppercase);
 }
+
+/* Intro styles */
 
 .intro {
 
@@ -164,6 +167,29 @@ body {
     }
 	}
 }
+/* Intro styles */
+
+/* Header styles */
+.header {
+  padding-top: 22px;
+  margin-bottom: 154px;
+
+  &__nav {
+    max-width: 422px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__link_1 {
+    color: $homeLinkColor;
+  }
+}
+/* Header styles */
 
 .content {
 	flex: 1 1 auto;
