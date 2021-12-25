@@ -1,0 +1,46 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+@font-face {
+	font-family: 'MyriadPro-Regular';
+	src: url('/fonts/ofont.ru_Myriad Pro.eot');
+	src: local('☺'), url('/fonts/ofont.ru_Myriad Pro.woff') format('woff'), url('/fonts/ofont.ru_Myriad Pro.ttf') format('truetype'), url('/fonts/ofont.ru_Myriad Pro.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Fonts */
+
+// Nullstyle
+@import "reset.scss";
+
+// Palette
+$dark: #000;
+$white: #fff;
+$headerLinkColor: #3c3c3c;
+$homeLinkColor: #ada074;
+
+@mixin textParameters($color: $dark,
+                        $size: 14px,
+                        $style: normal,
+                        $weight: 300,
+                        $lh: 1,
+                        $ls: normal,
+                        $transform: none,
+                        $opacity: 1,
+                        $shadow: none,
+                        $decoration: none) 
+                      {
+                          color: $color;
+                          font-size: $size;
+                          font-style: $style;
+                          font-weight: $weight;
+                          line-height: $lh;
+                          letter-spacing: $ls;
+                          text-transform: $transform;
+                          opacity: $opacity;
+                          text-shadow: $shadow;
+                          text-decoration: $decoration;
+}
+
+
+
