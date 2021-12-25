@@ -377,3 +377,157 @@ textarea {
 }
 
 /* NULLSTYLE */
+body {
+  font-family: "Lato", sans-serif;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  opacity: 1;
+  text-shadow: none;
+  text-decoration: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 165px 0 153px 0;
+  background: url(/img/BG-Intro-cut.jpg) 0 0/cover no-repeat;
+}
+
+.title {
+  position: relative;
+  padding-bottom: 50px;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  width: 105px;
+  bottom: 0;
+  height: 2px;
+  left: 50%;
+  background-color: #fff;
+  margin: 0 0 0 -52.5px;
+}
+
+.more {
+  display: inline-block;
+  position: relative;
+  padding: 16px 40px 18px 42px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.67px;
+  text-transform: uppercase;
+  opacity: 1;
+  text-shadow: none;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #3c3c3c;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  opacity: 1;
+  text-shadow: none;
+  text-decoration: none;
+}
+
+.intro__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+.intro__body {
+  margin: 0 auto;
+  max-width: 757px;
+  text-align: center;
+}
+.intro__logo {
+  margin-bottom: 154px;
+}
+.intro__title {
+  margin-bottom: 228px;
+  color: #fff;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 4.15px;
+  text-transform: none;
+  opacity: 1;
+  text-shadow: none;
+  text-decoration: none;
+}
+.intro__title span {
+  font-family: "Lato", sans-serif;
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #fff;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 5.43px;
+  text-transform: uppercase;
+  opacity: 1;
+  text-shadow: none;
+  text-decoration: none;
+}
+.intro__more {
+  border: 2px solid #fff;
+  color: #fff;
+}
+.intro__more::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  top: 128px;
+  height: 2px;
+  left: 47.5%;
+  background-color: #fff;
+  margin: 0 0 0 -6px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.intro__more::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  top: 128px;
+  height: 2px;
+  left: 52%;
+  background-color: #fff;
+  margin: 0 0 0 -6px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}

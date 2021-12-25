@@ -42,5 +42,132 @@ $homeLinkColor: #ada074;
                           text-decoration: $decoration;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+
+  @include textParameters();
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	min-height: 100vh;
+	padding: 165px 0 153px 0;
+	background: url(/img/BG-Intro-cut.jpg) 0 0/cover no-repeat;
+}
+
+.title {
+  position: relative;
+  padding-bottom: 50px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 105px;
+    bottom: 0;
+    height: 2px;
+    left: 50%;
+    background-color: $white;
+    margin: 0 0 0 -52.5px;
+  }
+}
+
+.more {
+  display: inline-block;
+  position: relative;
+  padding: 16px 40px 18px 42px;
+
+  @include textParameters($weight: 400,
+                          $size: 16px,
+                          $transform: uppercase,
+                          $ls: 0.67px);
+}
+
+.nav-link {
+  @include textParameters($color: $headerLinkColor,
+                          $size: 15px,
+                          $weight: 400,
+                          $transform: uppercase);
+}
+
+.intro {
+
+	&__row {
+		display: flex;
+    flex-wrap: wrap;
+		margin: 0 auto;
+	}
+
+	&__body {
+		margin: 0 auto;
+    max-width: 757px;
+    text-align: center;
+	}
+
+	&__logo {
+    margin-bottom: 154px;
+	}
+
+	&__title {
+
+    margin-bottom: 228px;
+
+    span {
+      font-family: 'Lato', sans-serif;
+      display: inline-block;
+      margin-bottom: 14px;
+
+      @include textParameters($color: $white,
+                              $weight: 900,
+                              $size: 34px,
+                              $transform: uppercase,
+                              $ls: 5.43px);
+    }
+
+    @include textParameters($color: $white,
+                            $weight: 400,
+                            $size: 26px,
+                            $ls: 4.15px);
+    }
+
+	&__more {
+    border: 2px solid $white;
+    color: $white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      top: 128px;
+      height: 2px;
+      left: 47.5%;
+      background-color: $white;
+      margin: 0 0 0 -6px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      top: 128px;
+      height: 2px;
+      left: 52%;
+      background-color: $white;
+      margin: 0 0 0 -6px;
+      transform: rotate(-45deg);
+    }
+	}
+}
+
+.content {
+	flex: 1 1 auto;
+}
+
 
 
