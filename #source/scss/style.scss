@@ -18,6 +18,9 @@ $dark: #000;
 $white: #fff;
 $headerLinkColor: #3c3c3c;
 $homeLinkColor: #ada074;
+$aboutTextColor: #868585;
+$aboutIcoBorderIcoColor: #f1f1f1;
+$item-aboutTextColor: #868585;
 
 // Mixins
 @mixin textParameters($color: $dark,
@@ -63,19 +66,24 @@ body {
 
 // Templates
 .title {
-  position: relative;
-  padding-bottom: 50px;
+  @include textParameters($weight: 700,
+                          $size: 34px,
+                          $transform: uppercase,
+                          $ls: 8.95px);
+	position: relative;
+	text-align: center;
+	padding: 0px 0px 30px 0px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 105px;
-    bottom: 0;
-    height: 2px;
-    left: 50%;
-    background-color: $white;
-    margin: 0 0 0 -52.5px;
-  }
+	&:after{
+		content:'';
+		position: absolute;
+		width: 81px;
+		bottom: 0;
+		height: 1px;
+		left: 50%;
+		background-color: $dark;
+		margin: 0px 0px 0px -40.5px;
+	}
 }
 
 .more {
@@ -136,7 +144,22 @@ body {
                             $weight: 400,
                             $size: 26px,
                             $ls: 4.15px);
+
+    position: relative;
+    padding-bottom: 50px;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      width: 105px;
+      bottom: 0;
+      height: 2px;
+      left: 50%;
+      background-color: $white;
+      margin: 0 0 0 -52.5px;
     }
+
+  }
 
 	&__more {
     border: 2px solid $white;
@@ -172,7 +195,7 @@ body {
 /* Header styles */
 .header {
   padding-top: 22px;
-  margin-bottom: 154px;
+  margin-bottom: 150px;
 
   &__nav {
     max-width: 422px;
@@ -191,9 +214,85 @@ body {
 }
 /* Header styles */
 
+/* Main content styles */
 .content {
 	flex: 1 1 auto;
 }
+/* Main content styles */
+
+
+/* About section styles */
+.about {
+	&__body {
+		max-width: 823px;
+		margin: 0px auto;
+	}
+
+	&__header {
+		margin: 0px 0px 65px 0px;
+	}
+
+	&__title {
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__text {
+		max-width: 688px;
+    @include textParameters($color: $aboutTextColor,
+                            $lh: 25.89px);
+		text-align: center;
+		margin: 0px auto;
+	}
+
+	&__row {
+		display: flex;
+    flex-wrap: wrap;
+		font-size: 0;
+		margin: 0px -15px;
+	}
+
+	&__column {
+		padding: 0px 15px;
+		flex: 0 0 33.333%;
+	}
+}
+
+.item-about {
+
+	&__icon {
+		margin: 0px auto 40px auto;
+		border-radius: 50%;
+		width: 92px;
+		height: 92px;
+		border: 2px solid $aboutIcoBorderIcoColor;
+		display: flex;
+    flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+    &_3 {
+       padding-left: 8px;
+    }
+	}
+
+	&__title {
+		text-align: center;
+    @include textParameters($color: $dark,
+                            $size: 22px,
+                            $weight: 400,
+                            $transform: uppercase,
+                            $ls: 3.52px);
+		margin: 0px 0px 35px 0px;
+	}
+
+	&__text {
+		text-align: center;
+    @include textParameters($color: $item-aboutTextColor,
+                            $lh: 26px);
+	}
+}
+/* About section styles */
+
 
 
 
