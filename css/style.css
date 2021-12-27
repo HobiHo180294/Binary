@@ -451,7 +451,20 @@ body {
   text-decoration: none;
 }
 
-.nav-link {
+.menu {
+  margin: 0 auto;
+}
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.menu__link {
   color: #3c3c3c;
   font-size: 15px;
   font-style: normal;
@@ -462,6 +475,9 @@ body {
   opacity: 1;
   text-shadow: none;
   text-decoration: none;
+}
+.menu__link_1 {
+  color: #ada074;
 }
 
 /* Intro styles */
@@ -525,29 +541,19 @@ body {
   border: 2px solid #fff;
   color: #fff;
 }
-.intro__more::before {
-  content: "";
-  position: absolute;
-  width: 12px;
-  top: 128px;
-  height: 2px;
-  left: 47.5%;
-  background-color: #fff;
-  margin: 0 0 0 -6px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
 .intro__more::after {
   content: "";
+  display: inline-block;
   position: absolute;
+  top: 116px;
+  left: 50%;
   width: 12px;
-  top: 128px;
-  height: 2px;
-  left: 52%;
-  background-color: #fff;
+  height: 12px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
   margin: 0 0 0 -6px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 /* Intro styles */
@@ -558,20 +564,6 @@ body {
 }
 .header__nav {
   max-width: 422px;
-  margin: 0 auto;
-}
-.header__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.header__link_1 {
-  color: #ada074;
 }
 
 /* Header styles */
@@ -584,6 +576,9 @@ body {
 
 /* Main content styles */
 /* About section styles */
+.about {
+  margin-bottom: 88px;
+}
 .about__body {
   max-width: 823px;
   margin: 0px auto;
@@ -608,6 +603,11 @@ body {
   text-decoration: none;
   text-align: center;
   margin: 0px auto;
+}
+.about__text span {
+  max-width: 480px;
+  display: inline-block;
+  text-align: center;
 }
 .about__row {
   display: -webkit-box;
@@ -634,8 +634,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -658,9 +658,10 @@ body {
   opacity: 1;
   text-shadow: none;
   text-decoration: none;
-  margin: 0px 0px 35px 0px;
+  margin: 0px 0px 24px 0px;
 }
 .item-about__text {
+  margin: 0 auto;
   text-align: center;
   color: #868585;
   font-size: 14px;
@@ -673,5 +674,71 @@ body {
   text-shadow: none;
   text-decoration: none;
 }
+.item-about__text_1 {
+  max-width: 183px;
+}
+.item-about__text_3 {
+  max-width: 248px;
+}
 
 /* About section styles */
+/* Portfolio styles */
+.portfolio__body {
+  padding-top: 107px;
+  padding-bottom: 62px;
+  background-color: #f3f3f3;
+}
+.portfolio__header {
+  margin-bottom: 136px;
+}
+.portfolio__title {
+  margin-bottom: 55px;
+}
+.portfolio__nav {
+  max-width: 294px;
+}
+.portfolio__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 538px 27px 538px;
+  grid-template-columns: repeat(2, 538px);
+  row-gap: 16px;
+  -webkit-column-gap: 27px;
+     -moz-column-gap: 27px;
+          column-gap: 27px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 64px;
+}
+.portfolio__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-column-span: 1;
+  grid-column: span 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.portfolio__card-color {
+  width: 538px;
+  height: 365px;
+  background-color: #eaeaea;
+}
+.portfolio__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.portfolio__more {
+  border: 2px solid #000;
+}
+
+/* Portfolio styles */

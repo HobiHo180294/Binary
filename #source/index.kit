@@ -9,7 +9,11 @@
 		<!-- Подключаем CSS -->
 		<link rel="stylesheet" href="css/style.css" />
 		<!-- Кодировка страницы -->
-		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<meta charset="UTF-8">
+
+		<!-- Адаптив -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<!-- Отображаемое тело страницы -->
 	<body>
@@ -42,22 +46,22 @@
 
 			<!-- Header -->
 			<header class="header">
-				<nav class="header__nav">
-                    <ul class="header__list">
-                        <li class="header__item">
-                            <a href="#!" class="header__link_1 nav-link">HOME</a>
+				<nav class="header__nav menu">
+                    <ul class="header__list menu__list">
+                        <li class="header__item menu__item">
+                            <a href="#!" class="header__link_1 menu__link menu__link_1">HOME</a>
                         </li>
     
                         <li class="header__item">
-                            <a href="#!" class="header__link_2 nav-link">ABOUT US</a>
+                            <a href="#!" class="header__link_2 menu__link menu__link_2">ABOUT US</a>
                         </li>
     
                         <li class="header__item">
-                            <a href="#!" class="header__link_3 nav-link">PORTFOLIO</a>
+                            <a href="#!" class="header__link_3 menu__link menu__link_3">PORTFOLIO</a>
                         </li>
     
                         <li class="header__item">
-                            <a href="#!" class="header__link_4 nav-link">CONTACT</a>
+                            <a href="#!" class="header__link_4 menu__link menu__link_4">CONTACT</a>
                         </li>
                     </ul>
 				</nav>
@@ -73,8 +77,11 @@
 						<div class="about__header">
 							<div class="about__title title">ABOUT</div>
 							<div class="about__text">We specialize in contemporary, functional, and stunning websites with design that really brings that "WOW" factor. 
-		In our design process, we make sure to stay one step ahead of the latest trends, 
-		never forgetting to abide by key web standards.</div>
+								<span>
+									In our design process, we make sure to stay one step ahead of the latest trends, 
+									never forgetting to abide by key web standards.
+								</span>
+							</div>
 						</div>
 						<div class="about__row">
 							<div class="about__column">
@@ -83,7 +90,7 @@
 										<img src="img/about/01.png" alt="" />
 									</div>
 									<div class="item-about__title">WEB</div>
-									<div class="item-about__text">We tend to deliver unique and functional design, through innovation and creativity.</div>
+									<div class="item-about__text item-about__text_1">We tend to deliver unique and functional design, through innovation and creativity.</div>
 								</div>
 							</div>
 							<div class="about__column">
@@ -92,7 +99,7 @@
 										<img src="img/about/02.png" alt="" />
 									</div>
 									<div class="item-about__title">iOS AND ANDROID</div>
-									<div class="item-about__text">We seek to bring new businesses and customers closer together through valuable insights and proper targeting.</div>
+									<div class="item-about__text item-about__text_2">We seek to bring new businesses and customers closer together through valuable insights and proper targeting.</div>
 								</div>
 							</div>
 							<div class="about__column">
@@ -101,13 +108,78 @@
 										<img src="img/about/03.png" alt="" />
 									</div>
 									<div class="item-about__title">MARKETING</div>
-									<div class="item-about__text">We’ll help you establish the right goals and build the right paths. Success depends on setting the right intention.</div>
+									<div class="item-about__text item-about__text_3">We’ll help you establish the right goals and build the right paths. Success depends on setting the right intention.</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!-- About section -->
+
+				<!-- Portfolio section -->
+				<section class="portfolio">
+					<div class="portfolio__body">
+						<div class="portfolio__header">
+							<div class="portfolio__title title">
+								PORTFOLIO
+							</div>
+
+							<nav class="portfolio__nav menu">
+								<ul class="portfolio__list menu__list">
+									<li class="portfolio__item menu__item">
+										<a href="#!" class="menu__link menu__link_1">ALL</a>
+									</li>
+				
+									<li class="portfolio__item  menu__item">
+										<a href="#!" class="menu__link menu__link_2">WEB</a>
+									</li>
+				
+									<li class="portfolio__item  menu__item">
+										<a href="#!" class="menu__link menu__link_3">APPS</a>
+									</li>
+				
+									<li class="portfolio__item  menu__item">
+										<a href="#!" class="menu__link menu__link_4">OTHER</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+
+						<div class="portfolio__cards">
+							<div class="portfolio__card">
+								<div class="portfolio__card-color"></div>
+							</div>
+
+							<div class="portfolio__card">
+								<div class="portfolio__card-color"></div>
+							</div>
+
+							<div class="portfolio__card">
+								<div class="portfolio__card-color"></div>
+							</div>
+
+							<div class="portfolio__card">
+								<div class="portfolio__card-color"></div>
+							</div>
+
+							<div class="portfolio__card">
+								<div class="portfolio__card-color"></div>
+							</div>
+
+							<div class="portfolio__card">
+								<div class="portfolio__card-color"></div>
+							</div>
+						</div>
+
+						<div class="portfolio__footer">
+							<a href="#!" class="portfolio__more more">
+								read more
+							</a>
+						</div>
+					</div>
+				</section>
+				<!-- Portfolio section -->
+
 
 			</main>
 			<!-- Main content -->
