@@ -367,6 +367,43 @@ body {
 }
 /* Portfolio styles */
 
+/* Partners styles */
+.partners {
+
+  margin-bottom: 184px;
+
+  &__body {
+    background: url("/img/Partners-BG-cutted.jpg") 0 0/cover no-repeat;
+    padding-top: 100px;
+    padding-bottom: 104px;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 98px;
+  }
+
+  &__title {
+    @include textParameters($color: $white,
+                            $size: 30px,
+                            $ls: 1.8px);
+  }
+
+  &__companies {
+    max-width: 584px;
+    margin: 0 auto;
+  }
+
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* Partners styles */
 
 
 

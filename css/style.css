@@ -742,3 +742,51 @@ body {
 }
 
 /* Portfolio styles */
+/* Partners styles */
+.partners {
+  margin-bottom: 184px;
+}
+.partners__body {
+  background: url("/img/Partners-BG-cutted.jpg") 0 0/cover no-repeat;
+  padding-top: 100px;
+  padding-bottom: 104px;
+}
+.partners__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 98px;
+}
+.partners__title {
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 1.8px;
+  text-transform: none;
+  opacity: 1;
+  text-shadow: none;
+  text-decoration: none;
+}
+.partners__companies {
+  max-width: 584px;
+  margin: 0 auto;
+}
+.partners__logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* Partners styles */
