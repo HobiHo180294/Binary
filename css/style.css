@@ -463,6 +463,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .menu__link {
   color: #3c3c3c;
@@ -478,6 +481,11 @@ body {
 }
 .menu__link_1 {
   color: #ada074;
+}
+
+.logo__pic {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* Intro styles */
@@ -1010,3 +1018,75 @@ body {
 }
 
 /* Contact styles */
+/* Footer styles */
+.footer__body {
+  background-color: #3c3c3c;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.footer__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 41px;
+}
+.footer__nav {
+  max-width: 260px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__link {
+  color: #a4a4a4;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  opacity: 1;
+  text-shadow: none;
+  text-decoration: none;
+}
+.footer__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer__copyright {
+  font-family: "MyriadPro-Regular";
+  color: #6c6c6c;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  opacity: 1;
+  text-shadow: none;
+  text-decoration: none;
+}
+
+/* Footer styles */

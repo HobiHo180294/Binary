@@ -37,6 +37,13 @@ $portfolioIMGColor: #eaeaea;
 $inputAfterShadowColor: #f8f7f7;
 // Contact section colors
 
+// Footer colors
+$footerBGColor: #3c3c3c;
+$footerNavLinksColor: #a4a4a4;
+$copyrightTextColor: #6c6c6c;
+// Footer colors
+
+
 
 // Mixins
 @mixin textParameters($color: $dark,
@@ -120,6 +127,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__link {
@@ -132,7 +140,13 @@ body {
       color: $firstLinkColor;
     }
   }
-  
+}
+
+.logo {
+
+  &__pic {
+    object-fit: cover;
+  }
 }
 
 /* Intro styles */
@@ -155,7 +169,6 @@ body {
 	}
 
 	&__title {
-
     margin-bottom: 228px;
 
     span {
@@ -227,7 +240,6 @@ body {
 	flex: 1 1 auto;
 }
 /* Main content styles */
-
 
 /* About section styles */
 .about {
@@ -548,8 +560,49 @@ body {
 }
 /* Contact styles */
 
+/* Footer styles */
+.footer {
 
+  &__body {
+    background-color: $footerBGColor;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 41px;
+  }
 
+  &__nav {
+    max-width: 260px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
 
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  &__link {
+    @include textParameters($color: $footerNavLinksColor,
+                            $weight: 400);
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__copyright {
+    font-family: "MyriadPro-Regular";
+    @include textParameters($color: $copyrightTextColor);
+  }
+}
+/* Footer styles */
