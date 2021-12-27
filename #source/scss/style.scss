@@ -33,6 +33,11 @@ $portfolioBGColor: #f3f3f3;
 $portfolioIMGColor: #eaeaea;
 // Portfolio section colors
 
+// Contact section colors
+$inputAfterShadowColor: #f8f7f7;
+// Contact section colors
+
+
 // Mixins
 @mixin textParameters($color: $dark,
                         $size: 14px,
@@ -210,7 +215,6 @@ body {
 /* Header styles */
 .header {
   padding-top: 22px;
-  margin-bottom: 150px;
 
   &__nav {
     max-width: 422px;
@@ -227,8 +231,8 @@ body {
 
 /* About section styles */
 .about {
-
-  margin-bottom: 88px;
+  padding-top: 150px;
+  padding-bottom: 88px;
 
 	&__body {
 		max-width: 823px;
@@ -370,8 +374,6 @@ body {
 /* Partners styles */
 .partners {
 
-  margin-bottom: 184px;
-
   &__body {
     background: url("/img/Partners-BG-cutted.jpg") 0 0/cover no-repeat;
     padding-top: 100px;
@@ -400,10 +402,153 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
   }
 }
-
 /* Partners styles */
+
+/* Contact styles */
+.contact {
+
+  padding-top: 180px;
+  padding-bottom: 102px;
+
+  &__header {
+    margin-bottom: 126px;
+
+  }
+
+  &__data {
+    padding-right: 120px;
+
+    &_wrap {
+      max-width: 718px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      gap: 84px;
+    }
+
+    &_e-mail {
+
+      mark {
+        background-color: $white;
+        @include textParameters($weight: 700);
+      }
+    }
+  }
+
+  &__form {
+
+    &_info {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 380px;
+      justify-content: space-between;
+    }
+
+    &_field {
+      display: inline-block;
+      width: 161px;
+      margin-bottom: 123px;
+      position: relative;
+      @include textParameters($lh: 26px);
+
+      &:nth-child(3) {
+        display: block;
+        width: 100%;
+        margin-bottom: 176px;
+
+        &::before {
+          content: '';
+          width: 100%;
+        }
+  
+        &::after {
+          content: '';
+          width: 100%;
+          height: 118px;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 161px;
+        height: 1px;
+        background-color: $dark;
+        top: 35px;
+        left: 0;
+      }
+
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 161px;
+        height: 35px;
+        background-color: $inputAfterShadowColor;
+        top: 36px;
+        left: 0;
+      }
+
+      &-input {
+        border: 0;
+        width: 100%;
+        
+        &::placeholder {
+          @include textParameters($transform: uppercase,
+                                  $ls: .84px,
+                                  $weight: 700);
+        }
+      }
+    }
+
+    &_button {
+      margin-left: auto;
+
+      &-send {
+        border: 0;
+        background-color: $white;
+        @include textParameters($weight: 700,
+                                $transform: uppercase,
+                                $ls: .84px);
+      }
+    }
+  }
+
+  &__text {
+
+    &_wrap {
+      max-width: 254px;
+    }
+
+    &_any-idea {
+      @include textParameters($lh: 26px);
+      margin-bottom: 32px;
+
+      span {
+        display: block;
+      }
+    }
+
+    &_fullname {
+      @include textParameters($weight: 700);
+      margin-bottom: 20px;
+    }
+
+    &_social {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 70px;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+  }
+}
+/* Contact styles */
+
+
 
 
 
