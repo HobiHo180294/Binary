@@ -391,6 +391,14 @@ body {
   text-decoration: none;
 }
 
+a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover, a:active {
+  opacity: 0.85;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;

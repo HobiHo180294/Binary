@@ -74,6 +74,14 @@ body {
   @include textParameters();
 }
 
+a {
+  transition: .5s;
+  
+  &:hover, &:active {
+    opacity: .85;
+  }
+}
+
 .wrapper {
 	min-height: 100%;
 	overflow: hidden;
