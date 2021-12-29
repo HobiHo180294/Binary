@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 @font-face {
   font-family: "MyriadPro-Regular";
-  src: url("/fonts/ofont.ru_Myriad Pro.eot");
-  src: local("☺"), url("/fonts/ofont.ru_Myriad Pro.woff") format("woff"), url("/fonts/ofont.ru_Myriad Pro.ttf") format("truetype"), url("/fonts/ofont.ru_Myriad Pro.svg") format("svg");
+  src: url("../fonts/ofont.ru_Myriad Pro.eot");
+  src: local("☺"), url("../fonts/ofont.ru_Myriad Pro.woff") format("woff"), url("../fonts/ofont.ru_Myriad Pro.ttf") format("truetype"), url("../fonts/ofont.ru_Myriad Pro.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -414,7 +414,7 @@ a:hover, a:active {
 .container {
   min-height: 100vh;
   padding: 165px 0 153px 0;
-  background: url("img/BG-Intro-cut.jpg") 0 0/cover no-repeat;
+  background: url("../img/BG-Intro-cut.jpg") 0 0/cover no-repeat;
 }
 
 .section__body {
@@ -764,7 +764,7 @@ a:hover, a:active {
 /* Portfolio styles */
 /* Partners styles */
 .partners__body {
-  background: url("img/Partners-BG-cutted.jpg") 0 0/cover no-repeat;
+  background: url("../img/Partners-BG-cutted.jpg") 0 0/cover no-repeat;
   padding-top: 100px;
   padding-bottom: 104px;
   max-width: 100%;
