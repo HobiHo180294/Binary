@@ -107,7 +107,7 @@ a {
 .container {
 	min-height: 100vh;
 	padding: 165px 0 153px 0;
-	background: url(/img/BG-Intro-cut.jpg) 0 0/cover no-repeat;
+	background: url("img/BG-Intro-cut.jpg") 0 0/cover no-repeat;
 }
 
 // Templates
@@ -417,7 +417,7 @@ a {
 .partners {
 
   &__body {
-    background: url("/img/Partners-BG-cutted.jpg") 0 0/cover no-repeat;
+    background: url("img/Partners-BG-cutted.jpg") 0 0/cover no-repeat;
     padding-top: 100px;
     padding-bottom: 104px;
     max-width: 100%;
