@@ -11,14 +11,15 @@
 /* Fonts */
 
 // Nullstyle
-@import "reset.scss";
+@import "_reset.scss";
 
 // Palette
 $dark: #000;
 $white: #fff;
+$darkgrey: #3c3c3c;
 
 // Header + NAV colors
-$headerLinkColor: #3c3c3c;
+
 $firstLinkColor: #ada074;
 // Header + NAV colors
 
@@ -38,36 +39,50 @@ $inputAfterShadowColor: #f8f7f7;
 // Contact section colors
 
 // Footer colors
-$footerBGColor: #3c3c3c;
 $footerNavLinksColor: #a4a4a4;
 $copyrightTextColor: #6c6c6c;
 // Footer colors
 
+// Adaptive font variables
+
+//Width of the layout container
+$maxWidth: 1280;
 
 
 // Mixins
 @mixin textParameters($color: $dark,
-                        $size: 14px,
-                        $style: normal,
-                        $weight: 300,
-                        $lh: 1,
-                        $ls: normal,
-                        $transform: none,
-                        $opacity: 1,
-                        $shadow: none,
-                        $decoration: none) 
-                      {
-                          color: $color;
-                          font-size: $size;
-                          font-style: $style;
-                          font-weight: $weight;
-                          line-height: $lh;
-                          letter-spacing: $ls;
-                          text-transform: $transform;
-                          opacity: $opacity;
-                          text-shadow: $shadow;
-                          text-decoration: $decoration;
+  $size: 14px,
+  $style: normal,
+  $weight: 300,
+  $lh: 1,
+  $ls: normal,
+  $transform: none,
+  $opacity: 1,
+  $shadow: none,
+  $decoration: none) {
+    color: $color;
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $lh;
+    letter-spacing: $ls;
+    text-transform: $transform;
+    opacity: $opacity;
+    text-shadow: $shadow;
+    text-decoration: $decoration;
 }
+
+// @mixin adaptiveFont($pcSize, $mobSize) {
+//   $addSize: $pcSize - $mobSize;
+//   $addMobSize: $addSize + $addSize * 0.7;
+
+//   @media (max-width: 800px) {
+//       font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+//   }
+//   @media (min-width: 800px) {
+//       font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+//   }
+// }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -96,11 +111,17 @@ a {
 }
 
 // Templates
+.section__body {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 .title {
   @include textParameters($weight: 700,
-                          $size: 34px,
-                          $transform: uppercase,
-                          $ls: 8.95px);
+    $size: 34px,
+    $transform: uppercase,
+    $ls: 8.95px);
+
 	position: relative;
 	text-align: center;
 	padding: 0px 0px 30px 0px;
@@ -123,9 +144,9 @@ a {
   padding: 16px 40px 18px 42px;
 
   @include textParameters($weight: 400,
-                          $size: 16px,
-                          $transform: uppercase,
-                          $ls: 0.67px);
+    $size: 16px,
+    $transform: uppercase,
+    $ls: 0.67px);
 }
 
 .menu {
@@ -139,12 +160,12 @@ a {
   }
 
   &__link {
-    @include textParameters($color: $headerLinkColor,
-                            $size: 15px,
-                            $weight: 400,
-                            $transform: uppercase);
+    @include textParameters($color: $darkgrey,
+      $size: 15px,
+      $weight: 400,
+      $transform: uppercase);
     
-    &_1 {
+    &_mark {
       color: $firstLinkColor;
     }
   }
@@ -167,8 +188,7 @@ a {
 	}
 
 	&__body {
-		margin: 0 auto;
-    max-width: 757px;
+    max-width: 787px;
     text-align: center;
 	}
 
@@ -185,16 +205,16 @@ a {
       margin-bottom: 14px;
 
       @include textParameters($color: $white,
-                              $weight: 900,
-                              $size: 34px,
-                              $transform: uppercase,
-                              $ls: 5.43px);
+        $size: 34px,
+        $weight: 900,
+        $transform: uppercase,
+        $ls: 5.43px);
     }
 
     @include textParameters($color: $white,
-                            $weight: 400,
-                            $size: 26px,
-                            $ls: 4.15px);
+      $weight: 400,
+      $size: 26px,
+      $ls: 4.15px);
 
     position: relative;
     padding-bottom: 50px;
@@ -255,8 +275,9 @@ a {
   padding-bottom: 88px;
 
 	&__body {
-		max-width: 823px;
-		margin: 0px auto;
+		max-width: 853px;
+    margin: 0 auto;
+    padding: 0 15px;
 	}
 
 	&__header {
@@ -269,70 +290,78 @@ a {
 
 	&__text {
 		max-width: 688px;
-    @include textParameters($color: $aboutTextColor,
-                            $lh: 25.89px);
+    @include textParameters($color: $aboutTextColor, $lh: 25.89px);
 		text-align: center;
 		margin: 0px auto;
 
-    span {
-      max-width: 480px;
-      display: inline-block;
-      text-align: center;
+    p {
+
+      &:last-child {
+        max-width: 480px;
+        display: inline-block;
+        text-align: center;
+      }
     }
 	}
 
-	&__row {
-		display: flex;
+  &__row {
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-		font-size: 0;
-		margin: 0px -15px;
-	}
+  }
 
-	&__column {
-		padding: 0px 15px;
-		flex: 0 0 33.333%;
-	}
+  &__column {
+    flex: 0 1 33.333%;
+    display: flex;
+  }
 }
 
 .item-about {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
 
 	&__icon {
 		margin: 0px auto 40px auto;
-		border-radius: 50%;
-		width: 92px;
-		height: 92px;
-		border: 2px solid $aboutIcoBorderIcoColor;
+    border-radius: 50%;
+    width: 92px;
+    height: 92px;
+    border: 2px solid $aboutIcoBorderIcoColor;
 		display: flex;
-    flex-wrap: nowrap;
 		align-items: center;
 		justify-content: center;
 
-    &_3 {
-       padding-left: 8px;
+    &_active {
+      padding-left: 10px;
     }
 	}
 
 	&__title {
-		text-align: center;
+    margin-bottom: 20px;
+
     @include textParameters($size: 22px,
-                            $weight: 400,
-                            $transform: uppercase,
-                            $ls: 3.52px);
-		margin: 0px 0px 24px 0px;
+      $weight: 400,
+      $transform: uppercase,
+      $ls: 3.52px);
 	}
 
 	&__text {
+    @include textParameters($color: $item-aboutTextColor, $lh: 26px);
     margin: 0 auto;
-    text-align: center;
-    @include textParameters($color: $item-aboutTextColor,
-                            $lh: 26px);
-      &_1 {
-        max-width: 183px;
-      }
 
-      &_3 {
-        max-width: 248px;
-      }
+
+    &_paddingLR-30 {
+      padding: 0 30px;
+    }
+
+    &_paddingLR-5 {
+      padding: 0 5px;
+    }
+
+    &_paddingLR-15 {
+      padding: 0 15px;
+    }
 	}
 }
 /* About section styles */
@@ -343,6 +372,7 @@ a {
   &__body {
     padding-top: 107px;
     padding-bottom: 62px;
+    max-width: 100%;
     background-color: $portfolioBGColor;
   }
 
@@ -367,15 +397,7 @@ a {
     margin-bottom: 64px;
   }
 
-  &__card {
-    display: flex;
-    flex-direction: column;
-    grid-column: span 1;
-    flex-wrap: wrap;
-  }
-
   &__card-color {
-    width: 538px;
     height: 365px;
     background-color: $portfolioIMGColor;
   }
@@ -398,6 +420,7 @@ a {
     background: url("/img/Partners-BG-cutted.jpg") 0 0/cover no-repeat;
     padding-top: 100px;
     padding-bottom: 104px;
+    max-width: 100%;
   }
 
   &__header {
@@ -409,8 +432,8 @@ a {
 
   &__title {
     @include textParameters($color: $white,
-                            $size: 30px,
-                            $ls: 1.8px);
+      $size: 30px,
+      $ls: 1.8px);
   }
 
   &__companies {
@@ -435,7 +458,6 @@ a {
 
   &__header {
     margin-bottom: 126px;
-
   }
 
   &__data {
@@ -444,9 +466,8 @@ a {
     &_wrap {
       max-width: 718px;
       display: flex;
-      flex-wrap: wrap;
       margin: 0 auto;
-      gap: 84px;
+      gap: 11.7%;
     }
 
     &_e-mail {
@@ -518,8 +539,8 @@ a {
         
         &::placeholder {
           @include textParameters($transform: uppercase,
-                                  $ls: .84px,
-                                  $weight: 700);
+            $ls: .84px,
+            $weight: 700);
         }
       }
     }
@@ -530,14 +551,17 @@ a {
       &-send {
         border: 0;
         background-color: $white;
+
         @include textParameters($weight: 700,
-                                $transform: uppercase,
-                                $ls: .84px);
+          $transform: uppercase,
+          $ls: .84px);
       }
     }
   }
 
   &__text {
+
+    flex: 1 1 auto;
 
     &_wrap {
       max-width: 254px;
@@ -572,15 +596,15 @@ a {
 .footer {
 
   &__body {
-    background-color: $footerBGColor;
+    background-color: $darkgrey;
+    max-width: 100%;
     padding-top: 48px;
     padding-bottom: 48px;
+    text-align: center;
+
   }
 
   &__header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     margin-bottom: 41px;
   }
 
@@ -598,14 +622,7 @@ a {
   }
 
   &__link {
-    @include textParameters($color: $footerNavLinksColor,
-                            $weight: 400);
-  }
-
-  &__footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include textParameters($color: $footerNavLinksColor, $weight: 400);
   }
 
   &__copyright {
@@ -614,3 +631,26 @@ a {
   }
 }
 /* Footer styles */
+
+/* Media queries */
+@media screen and (max-width: 1130px) {
+  .portfolio {
+    &__cards {
+      grid-template-columns: 538px;
+    }
+  }
+}
+
+@media screen and (max-width: 775px) {
+.item-about {
+  
+    &__title {
+      
+      &_media {
+        margin-bottom: 42px;
+      }
+    }
+  }
+}
+
+/* Media queries */
