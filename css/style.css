@@ -502,6 +502,9 @@ a:hover, a:active {
 }
 
 /* Intro styles */
+.intro__nav {
+  display: none;
+}
 .intro__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1207,15 +1210,15 @@ a:hover, a:active {
 
   .intro__burger {
     display: block;
-    position: relative;
+    position: fixed;
     width: 30px;
     height: 20px;
-    margin-left: auto;
+    right: 15px;
     z-index: 3;
   }
   .intro__burger span {
     position: absolute;
-    background-color: #fff;
+    background-color: #72aded;
     left: 0;
     width: 100%;
     height: 2px;
@@ -1225,7 +1228,7 @@ a:hover, a:active {
   }
   .intro__burger::before, .intro__burger::after {
     content: "";
-    background-color: #fff;
+    background-color: #72aded;
     position: absolute;
     width: 100%;
     height: 2px;
@@ -1254,6 +1257,7 @@ a:hover, a:active {
     bottom: 9px;
   }
   .intro__nav {
+    display: block;
     position: fixed;
     top: -100%;
     left: 0;
@@ -1261,8 +1265,8 @@ a:hover, a:active {
     height: 100%;
     background-color: #000;
     padding-top: 290px;
-    z-index: 1;
     overflow: auto;
+    z-index: 2;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
@@ -1283,7 +1287,7 @@ a:hover, a:active {
   }
   .intro__body {
     position: relative;
-    z-index: 0;
+    z-index: 2;
   }
   .intro__logo {
     margin-bottom: 80px;
