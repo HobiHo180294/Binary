@@ -1,0 +1,1 @@
+!function(){const e=document.querySelector(".header");var o=e.offsetTop;window.onscroll=()=>{window.pageYOffset>=o?e.classList.add("header__sticky"):e.classList.remove("header__sticky")}}(),$(document).ready((function(){$(".intro__burger").click((function(e){$(".intro__burger, .intro__nav").toggleClass("active"),$("body").toggleClass("lock")}))}));
