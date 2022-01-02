@@ -29,6 +29,12 @@ $(document).ready(function() {
     })
 });
 
+// Style for active links
+$('.menu__link').on('click', function(){
+    $('.menu__link').removeClass('active');
+    $(this).addClass('active');
+});
+
 // Scroll to anchors
 (function () {
 
