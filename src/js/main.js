@@ -21,6 +21,13 @@ $(document).ready(function() {
     })
 });
 
+// Closing burger menu by clicking on the links
+$(document).ready(function() {
+    $('.intro__link').click(function(event) {
+        $('.intro__nav').toggleClass('active');
+    })
+});
+
 // Scroll to anchors
 (function () {
 

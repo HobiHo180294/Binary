@@ -1204,7 +1204,7 @@ a:hover, a:active {
   }
 
   .container {
-    padding: 100px 15px;
+    padding: 120px 15px;
     min-height: 80px;
   }
 
@@ -1264,7 +1264,6 @@ a:hover, a:active {
     width: 100%;
     height: 100%;
     background-color: #000;
-    padding-top: 290px;
     overflow: auto;
     z-index: 2;
     -webkit-transition: all 0.3s ease 0s;
@@ -1275,6 +1274,13 @@ a:hover, a:active {
   }
   .intro__list {
     display: block;
+    position: absolute;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
   .intro__list li {
     margin-bottom: 40px;
