@@ -122,9 +122,9 @@ a {
       $weight: 400,
       $transform: uppercase);
 
-      // &:focus {
-      //   color: $activeLinkColor;
-      // }
+      &.active {
+        color: $activeLinkColor;
+      }
   }
 }
 
@@ -238,13 +238,6 @@ a {
   &__nav {
     overflow: hidden;
     max-width: 422px;
-  }
-
-  &__link {
-
-    &.active {
-      color: $activeLinkColor;
-    }
   }
 
 }
