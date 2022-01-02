@@ -24,7 +24,8 @@ $(document).ready(function() {
 // Closing burger menu by clicking on the links
 $(document).ready(function() {
     $('.intro__link').click(function(event) {
-        $('.intro__nav').toggleClass('active');
+        $('.intro__burger, .intro__nav').toggleClass('active');
+        $('body').toggleClass('lock');
     })
 });
 

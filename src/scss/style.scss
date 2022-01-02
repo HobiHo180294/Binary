@@ -14,40 +14,9 @@
 @import "_reset.scss";
 
 // Palette
-$dark: #000;
-$white: #fff;
-$darkgrey: #3c3c3c;
-
-// Header + NAV colors
-
-$firstLinkColor: #ada074;
-// Header + NAV colors
-
-// About section colors
-$aboutTextColor: #868585;
-$aboutIcoBorderIcoColor: #f1f1f1;
-$item-aboutTextColor: #868585;
-// About section colors
-
-// Portfolio section colors
-$portfolioBGColor: #f3f3f3;
-$portfolioIMGColor: #eaeaea;
-// Portfolio section colors
-
-// Contact section colors
-$inputAfterShadowColor: #f8f7f7;
-// Contact section colors
-
-// Footer colors
-$footerNavLinksColor: #a4a4a4;
-$copyrightTextColor: #6c6c6c;
-// Footer colors
+@import "_palette.scss";
 
 // Adaptive font variables
-
-//Width of the layout container
-$maxWidth: 1280;
-
 
 // Mixins
 @mixin textParameters($color: $dark,
@@ -71,18 +40,6 @@ $maxWidth: 1280;
     text-shadow: $shadow;
     text-decoration: $decoration;
 }
-
-// @mixin adaptiveFont($pcSize, $mobSize) {
-//   $addSize: $pcSize - $mobSize;
-//   $addMobSize: $addSize + $addSize * 0.7;
-
-//   @media (max-width: 800px) {
-//       font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
-//   }
-//   @media (min-width: 800px) {
-//       font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
-//   }
-// }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -159,15 +116,25 @@ a {
     align-items: center;
   }
 
+  &__item {
+
+    &:first-child {
+
+      .menu {
+
+        &__link {
+
+          color: $firstLinkColor;
+        }
+      }
+    }
+  }
+
   &__link {
     @include textParameters($color: $darkgrey,
       $size: 15px,
       $weight: 400,
       $transform: uppercase);
-    
-    &_mark {
-      color: $firstLinkColor;
-    }
   }
 }
 
@@ -566,6 +533,13 @@ a {
             $ls: .84px,
             $weight: 700);
         }
+
+        &:focus {
+
+          &::placeholder {
+            visibility: hidden;
+          }
+        }
       }
     }
 
@@ -659,17 +633,22 @@ a {
 /* Media queries */
 /* Laptop */
 @media screen and (max-width: 1130px) {
+
+  /* Portfolio styles */
   .portfolio {
     &__cards {
       grid-template-columns: 538px;
       grid-template-rows: repeat(6, 365px);
     }
   }
+  /* Portfolio styles*/
+
 }
 /* Laptop */
 
 /* Tablet */
 @media screen and (max-width: 775px) {
+  /* About styles*/
   .item-about {
     
       &__title {
@@ -679,7 +658,9 @@ a {
         }
       }
     }
+  /* About styles*/
 
+  /* Contact styles*/
   .contact {
 
       &__data {
@@ -709,25 +690,30 @@ a {
         }
       }
     }
+  /* Contact styles*/
 }
 /* Tablet */
-
 
 /* Mobile */
 @media screen and (max-width: 520px) {
 
+  /* Body styles */
   body {
 
     &.lock {
       overflow: hidden;
     }
   }
+  /* Body styles */
 
+  /* Container styles */
   .container {
     padding: 120px 15px;
     min-height: 80px;
   }
+  /* Container styles */
 
+  /* Intro styles */
   .intro {
 
     &__burger {
@@ -845,12 +831,15 @@ a {
       }
     }
   }
-  
+  /* Intro styles */
 
+  /* Header styles */
   .header {
     display: none;
   }
+  /* Header styles */
 
+  /* About styles */
   .about {
 
     padding-top: 107px;
@@ -885,15 +874,19 @@ a {
       }
     }
   }
+  /* About styles */
 
+
+  /* Portfolio styles */
   .portfolio {
-
     &__cards {
       grid-template-columns: 320px;
       grid-template-rows: repeat(6, 280px);
     }
   }
+  /* Portfolio styles */
 
+  /* Contact styles */
   .contact {
 
     &__form {
@@ -912,7 +905,7 @@ a {
       }
     }
   }
+  /* Contact styles */
 }
 /* Mobile */
-
 /* Media queries */
