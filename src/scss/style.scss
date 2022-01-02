@@ -116,25 +116,15 @@ a {
     align-items: center;
   }
 
-  &__item {
-
-    &:first-child {
-
-      .menu {
-
-        &__link {
-
-          color: $firstLinkColor;
-        }
-      }
-    }
-  }
-
   &__link {
     @include textParameters($color: $darkgrey,
       $size: 15px,
       $weight: 400,
       $transform: uppercase);
+
+      &:active {
+        color: $activeLinkColor;
+      }
   }
 }
 
@@ -235,7 +225,7 @@ a {
 
 
   &__sticky {
-    background-color: $dark;
+    background-color: $stickyMenuColor;
     position: fixed;
     top: 0;
     width: 100%;
@@ -249,6 +239,7 @@ a {
     overflow: hidden;
     max-width: 422px;
   }
+
 }
 /* Header styles */
 
@@ -716,17 +707,30 @@ a {
   /* Intro styles */
   .intro {
 
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-color: $headerBurgerColor;
+      z-index: 4;
+    }
+
     &__burger {
       display: block;
+      cursor: pointer;
       position: fixed;
       width: 30px;
       height: 20px;
+      top: 30px;
       right: 15px;
-      z-index: 3;
+      z-index: 5;
 
       span {
         position: absolute;
-        background-color: #72aded;
+        background-color: $burgerColor;
         left: 0;
         width: 100%;
         height: 2px;
@@ -736,7 +740,7 @@ a {
 
       &::before, &::after {
         content: "";
-        background-color: #72aded;
+        background-color: $burgerColor;
         position: absolute;
         width: 100%;
         height: 2px;
