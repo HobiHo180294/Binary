@@ -65,11 +65,11 @@ a {
 	min-height: 100vh;
 	padding: 165px 0 153px 0;
 	background: url("../img/BG-Intro-cut-min.jpg");
-  // background-attachment: fixed;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // overflow-y: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
 }
 
 // Templates
@@ -710,7 +710,7 @@ a {
   .container {
     padding: 120px 15px;
     min-height: 80px;
-    // overflow-y: scroll;
+    overflow-y: scroll;
   }
   /* Container styles */
 
